@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jaxb:bindings
+    xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+    xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+    jaxb:version="2.1">
+
+<jaxb:bindings schemaLocation="../xsd/schema.xsd">
+    <jaxb:globalBindings>
+        <!--<xjc:javaType adapter="de.adorsys.examples.jaxb.PointAdapter" name="de.adorsys.examples.jaxb.generated.Point" xmlType="Point" />-->
+        <xjc:javaType adapter="de.adorsys.examples.jaxb.NullableIntAdapter" name="java.lang.Integer" xmlType="NullableInt" />
+    </jaxb:globalBindings>
+</jaxb:bindings>
+</jaxb:bindings>
