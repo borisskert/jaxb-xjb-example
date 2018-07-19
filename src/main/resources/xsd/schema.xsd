@@ -30,7 +30,15 @@
     </xsd:complexType>
 
     <xsd:simpleType name="NullableInt">
-        <xsd:restriction base="xsd:int">
-        </xsd:restriction>
+        <xsd:union>
+            <xsd:simpleType>
+                <xsd:restriction base='xsd:string'>
+                    <xsd:length value="0"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType>
+                <xsd:restriction base='xsd:int' />
+            </xsd:simpleType>
+        </xsd:union>
     </xsd:simpleType>
 </xsd:schema>

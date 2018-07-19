@@ -2,11 +2,11 @@
 <jaxb:bindings
     xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
     xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+    xmlns:bs="https://github.com/borisskert/jaxb-xjb-example"
     jaxb:version="2.1">
 
 <jaxb:bindings schemaLocation="../xsd/schema.xsd">
     <jaxb:globalBindings>
-        <!--<xjc:javaType adapter="de.adorsys.examples.jaxb.PointAdapter" name="de.adorsys.examples.jaxb.generated.Point" xmlType="Point" />-->
         <xjc:javaType adapter="de.adorsys.examples.jaxb.NullableIntAdapter" name="java.lang.Integer" xmlType="bs:NullableInt" />
     </jaxb:globalBindings>
 </jaxb:bindings>
