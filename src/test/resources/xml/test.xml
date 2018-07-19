@@ -20,4 +20,22 @@
             <bs:z>000</bs:z>
         </bs:c>
     </bs:triangle>
+    <bs:triangle>
+        <bs:name>my 2D triangle</bs:name>
+        <bs:a>
+            <bs:x>123</bs:x>
+            <bs:y>987</bs:y>
+            <bs:z></bs:z>
+        </bs:a>
+        <bs:b>
+            <bs:x>234</bs:x>
+            <bs:y>876</bs:y>
+            <bs:z></bs:z>
+        </bs:b>
+        <bs:c>
+            <bs:x>345</bs:x>
+            <bs:y>765</bs:y>
+            <bs:z></bs:z>
+        </bs:c>
+    </bs:triangle>
 </bs:triangles>

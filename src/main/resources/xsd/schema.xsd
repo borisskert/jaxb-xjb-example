@@ -25,7 +25,7 @@
         <xsd:sequence>
             <xsd:element name="x" type="xsd:int"/>
             <xsd:element name="y" type="xsd:int"/>
-            <xsd:element name="z" type="bs:NullableInt" nillable="true"/>
+            <xsd:element name="z" type="bs:NullableInt" minOccurs="0"/>
         </xsd:sequence>
     </xsd:complexType>
 

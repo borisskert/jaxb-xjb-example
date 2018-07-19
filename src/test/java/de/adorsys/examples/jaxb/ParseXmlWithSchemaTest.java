@@ -14,6 +14,7 @@ import java.util.List;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsEqual.equalTo;
+import static org.hamcrest.core.IsNull.nullValue;
 
 public class ParseXmlWithSchemaTest {
 
@@ -30,13 +31,13 @@ public class ParseXmlWithSchemaTest {
     }
 
     @Test
-    public void shouldHaveSizeOfOne() throws Exception {
+    public void shouldHaveSizeOfTwo() throws Exception {
         List<Triangle> triangles = this.triangles.getTriangle();
-        assertThat(triangles.size(), is(equalTo(1)));
+        assertThat(triangles.size(), is(equalTo(2)));
     }
 
     @Test
-    public void shouldHaveRightCoordinatesOne() throws Exception {
+    public void shouldHaveRight3DCoordinates() throws Exception {
         List<Triangle> triangles = this.triangles.getTriangle();
         Triangle triangle = triangles.get(0);
 
@@ -51,5 +52,23 @@ public class ParseXmlWithSchemaTest {
         assertThat(triangle.getC().getX(), is(equalTo(345)));
         assertThat(triangle.getC().getY(), is(equalTo(765)));
         assertThat(triangle.getC().getZ(), is(equalTo(000)));
+    }
+
+    @Test
+    public void shouldHaveRight2DCoordinates() throws Exception {
+        List<Triangle> triangles = this.triangles.getTriangle();
+        Triangle triangle = triangles.get(1);
+
+        assertThat(triangle.getA().getX(), is(equalTo(123)));
+        assertThat(triangle.getA().getY(), is(equalTo(987)));
+        assertThat(triangle.getA().getZ(), is(nullValue()));
+
+        assertThat(triangle.getB().getX(), is(equalTo(234)));
+        assertThat(triangle.getB().getY(), is(equalTo(876)));
+        assertThat(triangle.getB().getZ(), is(nullValue()));
+
+        assertThat(triangle.getC().getX(), is(equalTo(345)));
+        assertThat(triangle.getC().getY(), is(equalTo(765)));
+        assertThat(triangle.getC().getZ(), is(nullValue()));
     }
 }
