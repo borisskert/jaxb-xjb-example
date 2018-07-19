@@ -5,9 +5,7 @@
     xmlns:bs="https://github.com/borisskert/jaxb-xjb-example"
     jaxb:version="2.1">
 
-<jaxb:bindings schemaLocation="../xsd/schema.xsd">
     <jaxb:globalBindings>
         <xjc:javaType adapter="de.adorsys.examples.jaxb.NullableIntAdapter" name="java.lang.Integer" xmlType="bs:NullableInt" />
     </jaxb:globalBindings>
-</jaxb:bindings>
 </jaxb:bindings>
