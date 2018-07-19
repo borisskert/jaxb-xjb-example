@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <xsd:element name="myComplexType" type="MyComplexType"/>
-    <xsd:element name="point" type="Point"/>
-    <xsd:element name="nullableInt" type="NullableInt"/>
-    <xsd:element name="comment" type="xsd:string"/>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:bs="https://github.com/borisskert/jaxb-xjb-example"
+            targetNamespace="https://github.com/borisskert/jaxb-xjb-example"
+            elementFormDefault="qualified">
 
-    <xsd:complexType name="MyComplexType">
+    <xsd:element name="triangles">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="triangle" type="bs:Triangle" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:complexType name="Triangle">
         <xsd:sequence>
-            <xsd:element name="point" type="Point"/>
-            <xsd:element name="nullableInt" type="NullableInt"/>
+            <xsd:element name="name" type="xsd:string"/>
+            <xsd:element name="a" type="bs:Point"/>
+            <xsd:element name="b" type="bs:Point"/>
+            <xsd:element name="c" type="bs:Point"/>
         </xsd:sequence>
     </xsd:complexType>
 
@@ -16,6 +25,7 @@
         <xsd:sequence>
             <xsd:element name="x" type="xsd:int"/>
             <xsd:element name="y" type="xsd:int"/>
+            <xsd:element name="z" type="bs:NullableInt" nillable="true"/>
         </xsd:sequence>
     </xsd:complexType>
 

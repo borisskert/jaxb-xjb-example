@@ -7,7 +7,7 @@
 <jaxb:bindings schemaLocation="../xsd/schema.xsd">
     <jaxb:globalBindings>
         <!--<xjc:javaType adapter="de.adorsys.examples.jaxb.PointAdapter" name="de.adorsys.examples.jaxb.generated.Point" xmlType="Point" />-->
-        <xjc:javaType adapter="de.adorsys.examples.jaxb.NullableIntAdapter" name="java.lang.Integer" xmlType="NullableInt" />
+        <xjc:javaType adapter="de.adorsys.examples.jaxb.NullableIntAdapter" name="java.lang.Integer" xmlType="bs:NullableInt" />
     </jaxb:globalBindings>
 </jaxb:bindings>
 </jaxb:bindings>
