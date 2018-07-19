@@ -1,18 +1,16 @@
 package de.adorsys.examples.jaxb;
 
-import com.googlecode.catchexception.apis.CatchExceptionHamcrestMatchers;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 import static com.googlecode.catchexception.CatchException.catchException;
 import static com.googlecode.catchexception.CatchException.caughtException;
-import static org.hamcrest.core.AllOf.allOf;
 import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.hamcrest.core.IsInstanceOf.instanceOf;
 import static org.hamcrest.core.IsNull.nullValue;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertThat;
 
 public class NullableIntAdapterTest {
 
